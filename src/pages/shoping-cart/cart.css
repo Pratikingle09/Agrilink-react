@@ -1,0 +1,136 @@
+.shop-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-head {
+    margin-top: 10rem; 
+    text-align: center;
+}
+
+.cart-image {
+    width: 40px;
+    height: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+th, td {
+    padding: 8px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-input {
+    width: 50px;
+    padding: 6px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    text-align: center;
+    margin: 0 5px;
+    appearance: none;
+}
+
+.cart-product {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.cart-product-name {
+    margin-left: 0px;
+    font-weight: bold;
+}
+
+.cart-remove {
+    color: rgb(220, 22, 22);
+    text-decoration: none;
+    font-weight: bold;
+}
+.cart-remove:hover{
+    color: red;
+    text-decoration: underline;
+
+}
+
+.checkout {
+    margin-top: 2rem;
+}
+
+.cart-address {
+    width: 100%; 
+    max-width: 600px;
+    height: 100px;
+    margin-left: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.checkout-btn {
+    width: 10%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 45%;
+    border: none;
+    border-radius: 4px;
+    background-color: #1679AB;
+    color: white;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #333; /* Darken the background color on hover */
+}
+
+.quantity-wrapper {
+    display: flex;
+    justify-content:center;
+  }
+  
+  .quantity-wrapper button {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+  }
+  
+  .quantity-wrapper button:active {
+    background-color: #e0e0e0;
+  }
+  
+
+@media(max-width:320px){
+    .cart-address {
+        margin-left: 0%;
+    }
+    .checkout-btn {
+        display: block;
+        width: 40%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(40, 38, 38);
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 5.5rem;
+    }
+    th, td {
+        padding: 0px; 
+        text-align: center; 
+        border-bottom: 1px solid #ddd;
+    }
+}
