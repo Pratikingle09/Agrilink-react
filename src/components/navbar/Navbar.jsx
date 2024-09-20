@@ -22,21 +22,21 @@ function Navbar() {
   };
 
   const profileForAccount = () => {
-    if (user.profile_image)
+    if (user?.profile_image)
       {
-        return (<img src={user.profile_image} alt="Profile Image" className="profile p-i" />)
+        return (<img src={user?.profile_image} alt="Profile Image" className="profile p-i" />)
       }
-    if (user.account_type == "student") {
+    if (user?.account_type == "student") {
       return (
         <img src={studentImg} alt="Profile Image" className="profile p-i" />
       );
     }
-    if (user.account_type == "farmer") {
+    if (user?.account_type == "farmer") {
       return (
         <img src={farmerImg} alt="Profile Image" className="profile p-i" />
       );
     }
-    if (user.account_type == "seller") {
+    if (user?.account_type == "seller") {
       return (
         <img src={sellerImg} alt="Profile Image" className="profile p-i" />
       );
@@ -69,7 +69,7 @@ function Navbar() {
           activeclassname="active"
         >
       <i className  ="fa fa-bell" style={{fontSize:'25px'}}></i>
-      <span className="notification-count">{notification.length || 0}</span>
+      <span className="notification-count">{notification?.length || 0}</span>
         </NavLink>
       </div>
 

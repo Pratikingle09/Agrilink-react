@@ -21,7 +21,7 @@ function Home() {
   };
   return (
     <>
-      {user.isLogin && <Navbar />}
+      {user?.isLogin && <Navbar />}
       <div className="body" style={{ top: 0, position: "absolute" }}>
         <div className="site-wrapper">
           <div className="site-wrapper-inner">
@@ -43,7 +43,7 @@ function Home() {
                        Learn more
                     </button>
                   </a>
-                  {!user.isLogin && (
+                  {!user?.isLogin && (
                     <button
                       onClick={handleOnClick}
                       className="btn   link reg"
