@@ -12,7 +12,7 @@ function Login() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(user.isLogin == true)
+    if(user?.isLogin == true)
       {
         alert("user already logged in")
         navigate('/')
@@ -22,7 +22,7 @@ function Login() {
   const authenticateUser = (e) => {
     e.preventDefault();
     if (email && password) {
-      if (user.email == email && user.password == password) {
+      if (user?.email == email && user?.password == password) {
         user.isLogin=true
         localStorage.setItem('profile',JSON.stringify(user))
         alert("Login Successful");
@@ -36,24 +36,24 @@ function Login() {
   };
   return (
     <div>
-      <form className={Style.login_container}>
+      <form className={Style?.login_container}>
       <h1>login</h1>
 
         <input
           type="email"
           placeholder="Email"
-          className={Style.input}
+          className={Style?.input}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
           placeholder="Password"
-          className={Style.input}
+          className={Style?.input}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button onClick={authenticateUser} className={Style.submit}>Login</button>
+        <button onClick={authenticateUser} className={Style?.submit}>Login</button>
       </form>
     </div>
   );
